@@ -1,24 +1,4 @@
-# README
+# Wicked PDF RSpec/Capybara Example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is an sample Rails application created to test the content of dynamically generated PDFs from Wicked PDF. 
+Wicked PDF provides the ability to render its document to the view or return a Base64 string, but does not provide a tool to decode the content into a parseable string. Using the PDF::Reader gem, I can decode the Base64 content. This makes it possible to test the contents of a PDF using RSpec and Capybara. 
