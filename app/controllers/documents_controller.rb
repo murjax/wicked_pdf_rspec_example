@@ -9,6 +9,16 @@ class DocumentsController < ApplicationController
     @document = Document.new
   end
 
+  def show
+    respond_to do |format|
+      format.html { redirect_to document_path(@document, format: :pdf) }
+      format.pdf do
+        render pdf: 'document', page_size: 'Letter', margin: { top: 0, left: 5, right: 5, bottom: 0 }, locals: { document: @document }
+      end
+    end
+
+  end
+
   def create
     @document = Document.new(document_params)
 
