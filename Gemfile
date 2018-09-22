@@ -20,7 +20,9 @@ group :development, :test do
 end
 
 group :test do
+  gem 'capybara'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
+  gem 'pdf-reader'
 end
