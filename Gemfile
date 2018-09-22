@@ -8,7 +8,16 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary', '0.12.3'
+gem 'simple_form'
 gem 'pry-rails'
+
+group :development do
+  gem 'listen'
+end
+
+group :development, :test do
+  gem 'bootsnap', require: false
+end
 
 group :test do
   gem 'rspec-rails'
