@@ -7,8 +7,8 @@ describe 'Documents', type: :request do
       document_body = "Just pretend you are a whisper floating across a mountain. Don't fiddle with it all day. Get tough with it, get strong."
       document = Document.create(name: document_name, body: document_body)
       visit document_path(document)
-      expect(pdf_text(page)).to include(document_name)
-      expect(pdf_text(page)).to include(document_body)
+      expect(page.pdf_text).to include(document_name)
+      expect(page.pdf_text).to include(document_body)
     end
   end
 end
